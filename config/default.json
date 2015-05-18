@@ -1,7 +1,14 @@
 {
-  "home": {
-    "host"   : "http://trinket.dev",
-    "bucket" : "userassets",
-    "secret" : "superlambdasecret"
+  "buckets": {
+    "trinket-dev-user-assets": {
+      "host"   : "https://dev.trinket.io",
+      "bucket" : "userassets",
+      "secret" : "supersecret"
+    },
+    "trinket-user-assets": {
+      "host"   : "https://trinket.io",
+      "bucket" : "userassets",
+      "secret" : "superlambdasecret"
+    }
   }
 }

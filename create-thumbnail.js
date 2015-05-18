@@ -102,10 +102,11 @@ exports.handler = function(event, context) {
         } else {
           var fileId = fileMatch[1];
 
-          request.post(config.home.host + '/api/files/' + fileId + '/thumbnail', {
+          var bucketConfig = config.buckets[srcBucket];
+          request.post(bucketConfig.host + '/api/files/' + fileId + '/thumbnail', {
             form : {
-              bucket : config.home.bucket,
-              secret : config.home.secret
+              bucket : bucketConfig.bucket,
+              secret : bucketConfig.secret
             }
           }, function(err, response, body) {
             err && console.log('could not make request back: ' + err);
